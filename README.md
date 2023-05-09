@@ -1,7 +1,6 @@
 ### Hi there 👋
 <p align="center">
-  <img src="https://count.getloli.com/get/@ShinoKana?theme=asoul" alt="animedescription" width="90" />
-  <img src="https://komarev.com/ghpvc/?username=ShinoKana&color=blue" alt="counter" />
+  <img src="https://count.getloli.com/get/@ShinoKana?theme=asoul" alt="animedescription" width="300" />
 </p>
 
 <!--
