@@ -1,13 +1,12 @@
-<table width="100%">
-  <tr>
-    <td width="50%">
-      <img src="https://github-readme-stats.vercel.app/api?username=ShinoKana&show_icons=true&theme=monokai" alt="ShinoKana's GitHub Stats" />
-    </td>
-    <td width="50%" align="center">
-      <img src="https://count.getloli.com/get/@ShinoKana?theme=asoul" alt="animedescription" width="250" />
-    </td>
-  </tr>
-</table>
+<div style="display: flex; align-items: center; justify-content: space-between;">
+  <div>
+    <img src="https://github-readme-stats.vercel.app/api?username=ShinoKana&show_icons=true&theme=monokai" alt="ShinoKana's GitHub Stats" />
+  </div>
+  <div>
+    <img src="https://count.getloli.com/get/@ShinoKana?theme=asoul" alt="animedescription" width="250" />
+  </div>
+</div>
+
 
 <!--
 
