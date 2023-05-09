@@ -1,4 +1,8 @@
 ### Hi there 👋
+<p align="center">
+  <img src="https://count.getloli.com/get/@ShinoKana?theme=asoul" alt="animedescription" width="90" />
+  <img src="https://komarev.com/ghpvc/?username=ShinoKana&color=blue" alt="counter" />
+</p>
 
 <!--
 **ShinoKana/ShinoKana** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
