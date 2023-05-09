@@ -1,30 +1,32 @@
-name: Generate Snake
+name: Generate Snk
 
 on:
   push:
     branches:
       - main
   schedule:
-    - cron: "0 0 * * *"
+    - cron: '0 0 * * *'
 
 jobs:
   generate_snake:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 16
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Generate Snake
-        uses: Platane/snk@v2
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          outputs: |
-            github-contribution-grid-snake.svg
+    - uses: actions/checkout@v2
+      with:
+        ref: output
+    - name: Set up Node.js 16
+      uses: actions/setup-node@v2
+      with:
+        node-version: 16
+    - uses: Platane/snk@v2
+      with:
+        github_user_name: ${{ github.repository_owner }}
+        outputs: |
+          github-contribution-grid-snake.svg?color_snake=#B04078&color_dots=#64A1F4,#4B91F1,#3C7DD9,#bfd6f6,#8dbdff
+    - name: Commit and push
+      run: |
+        git add .
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git commit -m "Generated snake"
+        git push
