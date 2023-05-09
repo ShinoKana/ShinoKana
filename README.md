@@ -4,5 +4,5 @@
 <p align="center">
   <img src="https://i.imgur.com/kacFnHV.gif" width="300" align="left" />
   <br/>
-  <span style="color: #1e6a8d; font-weight: bold;">これは雨ですか？それとも涙ですか。</span>
+  Ⓚⓞⓡⓔ ⓦⓐ ⓐⓜⓔ ⓓⓔⓢⓚⓐ？ ⓢⓞⓡⓔⓣⓞⓜⓞ ⓝⓐⓜⓘⓓⓐ ⓘⓢⓚⓐ。
 </p>
