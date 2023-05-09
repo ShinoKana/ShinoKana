@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '30 2 * * *'
 
 jobs:
   generate_snake:
@@ -22,4 +22,4 @@ jobs:
       with:
         github_user_name: ${{ github.repository_owner }}
         outputs: |
-          github-contribution-grid-snake.svg?color_snake=#B04078&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
+          github-contribution-grid-snake.svg?color_snake=#B04078&color_dots=#0d3d56, #1e6a8d, #3997c4, #5cc0f9, #b3e5ff
