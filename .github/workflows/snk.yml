@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: '15 2 * * *'
+    - cron: '14 2 * * *'
 
 jobs:
   generate_snake:
