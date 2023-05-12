@@ -28,21 +28,6 @@
     <tspan dx="0" dy="0" style="opacity:0" id="sixteenth">か</tspan>
     <tspan dx="0" dy="0" style="opacity:0" id="seventeenth">。</tspan>
 
-    <animate xlink:href="#second" attributeName="opacity" from="0" to="1" begin="1s" dur="1s" fill="freeze"></animate>
-    <animate xlink:href="#third" attributeName="opacity" from="0" to="1" begin="2s" dur="1s" fill="freeze"></animate>
-    <animate xlink:href="#fourth" attributeName="opacity" from="0" to="1" begin="3s" dur="1s" fill="freeze"></animate>
-    <animate xlink:href="#fifth" attributeName="opacity" from="0" to="1" begin="4s" dur="1s" fill="freeze"></animate>
-    <animate xlink:href="#sixth" attributeName="opacity" from="0" to="1" begin="5s" dur="1s" fill="freeze"></animate>
-    <animate xlink:href="#seventh" attributeName="opacity" from="0" to="1" begin="6s" dur="1s" fill="freeze"></animate>
-    <animate xlink:href="#eighth" attributeName="opacity" from="0" to="1" begin="7s" dur="1s" fill="freeze"></animate>
-    <animate xlink:href="#ninth" attributeName="opacity" from="0" to="1" begin="8s" dur="1s" fill="freeze"></animate>
-    <animate xlink:href="#tenth" attributeName="opacity" from="0" to="1" begin="9s" dur="1s" fill="freeze"></animate>
-    <animate xlink:href="#eleventh" attributeName="opacity" from="0" to="1" begin="10s" dur="1s" fill="freeze"></animate>
-    <animate xlink:href="#twelfth" attributeName="opacity" from="0" to="1" begin="11s" dur="1s" fill="freeze"></animate>
-    <animate xlink:href="#thirteenth" attributeName="opacity" from="0" to="1" begin="12s" dur="1s" fill="freeze"></animate>
-    <animate xlink:href="#fourteenth" attributeName="opacity" from="0" to="1" begin="13s" dur="1s" fill="freeze"></animate>
-    <animate xlink:href="#fifteenth" attributeName="opacity" from="0" to="1" begin="14s" dur="1s" fill="freeze"></animate>
-    <animate xlink:href="#sixteenth" attributeName="opacity" from="0" to="1" begin="15s" dur="1s" fill="freeze"></animate>
-    <animate xlink:href="#seventeenth" attributeName="opacity" from="0" to="1" begin="16s" dur="1s" fill="freeze"></animate>
+
   </text>
 </svg>
