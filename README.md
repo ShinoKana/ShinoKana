@@ -4,5 +4,5 @@
 <p align="center">
   <img src="https://i.imgur.com/kacFnHV.gif" width="300" align="center" />
   <br/><br/>
-  <img src="https://github.com/ShinoKana/ShinoKana/blob/main/text_animation.svg" align="center" width=“400”/>
+  <img src="https://github.com/ShinoKana/ShinoKana/blob/main/text_animation.svg" align="center" width=“300”/>
 </p>
