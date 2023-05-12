@@ -9,5 +9,5 @@
       </stop>
     </linearGradient>
   </defs>
-  <text fill="url(#gradient)" x="0" y="0" font-size="30">これは雨ですか？それとも涙ですか。</text>
+  <text fill="url(#gradient)" x="80" y="50" font-size="25">これは雨ですか？それとも涙ですか。</text>
 </svg>
