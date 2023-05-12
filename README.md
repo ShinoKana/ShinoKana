@@ -4,6 +4,5 @@
 <p align="center">
   <img src="https://i.imgur.com/kacFnHV.gif" width="300" align="center" />
   <br/><br/>
-  これは雨ですか？<br>
-  それとも涙ですか。
+  <img src="https://github.com/ShinoKana/ShinoKana/blob/main/text_animation.svg" width="300" align="center" />
 </p>
