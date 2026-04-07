@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ShinoKana&theme=monokai" width="720" />
+</p>
+
 <img align="right" width="380"
 src="https://count.getloli.com/get/@ShinoKana?theme=asoul" alt="animecounter" />
 
