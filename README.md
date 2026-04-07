@@ -1,9 +1,10 @@
-<p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ShinoKana&theme=monokai" width="720" />
-</p>
+<img align="left" width="380"
+src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ShinoKana&theme=monokai" />
 
 <img align="right" width="380"
 src="https://count.getloli.com/get/@ShinoKana?theme=asoul" alt="animecounter" />
+
+<br clear="both" />
 
 <img align="center" width="1000"
 src="https://raw.githubusercontent.com/ShinoKana/ShinoKana/main/github-contribution-grid-snake.svg" />
