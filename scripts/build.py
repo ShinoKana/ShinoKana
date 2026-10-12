@@ -151,7 +151,10 @@ def esc(s):
 def card(font, theme, s):
     t = THEMES[theme]
     pal = t["palette"]
-    W, H = 760, 220  # same height as the counter (315x100) at 44% / 40% width
+    W, H = 760, 220
+    # Transparent strip on the left so the card lines up with the snake grid
+    # (inset ~2%) without hspace, which would overflow on phones.
+    PAD = 39
     L, R = 36, W - 36
 
     # stats, right-aligned on the first line
@@ -194,7 +197,7 @@ text{{font-family:'klee','Hiragino Mincho ProN',serif}}
 .name{{font-size:24px;fill:{t['text']}}}
 .num{{font-size:36px;fill:url(#ink)}}
 """
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-label="languages, stars and longest streak">
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="{-PAD} 0 {W + PAD} {H}" width="{W + PAD}" height="{H}" role="img" aria-label="languages, stars and longest streak">
 <defs>
 <style>{css}</style>
 <linearGradient id="ink" x1="0" y1="0" x2="1" y2="0">

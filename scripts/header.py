@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
-"""Turn a short clip into the looping header (assets/header.webp, header-dark.webp).
+"""Turn a short clip into the looping header (assets/header[-dark].avif / .webp).
 
-    python3 scripts/header.py clip.mp4 --en-font GreatVibes-Regular.ttf --outdir assets
+    python3 scripts/header.py clip.mp4 --en-font GreatVibes-Regular.ttf --outdir assets \
+        --format avif --width 1600          # sharp version for retina screens
+    python3 scripts/header.py clip.mp4 --en-font GreatVibes-Regular.ttf --outdir assets \
+        --format webp --width 960           # fallback for browsers without AVIF
 
 Each loop of the clip, 見知らぬわたし is written onto the typewriter paper
 stroke by stroke, then "Kana" is signed under it; both fade before the loop
@@ -11,7 +14,8 @@ graded down afterwards (the art is very bright for a dark page) and its
 edges fade into GitHub's dark background.
 
 Stroke order comes from KanjiVG (assets/kanjivg, CC BY-SA 3.0, Ulrich Apel,
-https://kanjivg.tagaini.net). Needs ffmpeg, img2webp (libwebp), Pillow and
+https://kanjivg.tagaini.net). Needs ffmpeg (with libsvtav1 for AVIF), img2webp or ffmpeg libwebp_anim for
+WebP, Pillow and
 numpy. Script font: github.com/google/fonts ofl/greatvibes (its K stays a K
 at this size; Pinyon Script's reads as H).
 """
@@ -251,7 +255,9 @@ def main():
     ap.add_argument("--en-font", required=True)
     ap.add_argument("--outdir", default=str(ROOT / "assets"))
     ap.add_argument("--width", type=int, default=960)
-    ap.add_argument("--quality", type=int, default=75)
+    ap.add_argument("--format", choices=("avif", "webp"), default="webp")
+    ap.add_argument("--quality", type=int, default=75, help="WebP quality")
+    ap.add_argument("--crf", type=int, default=30, help="AVIF quality (lower is better)")
     ap.add_argument("--still", type=float, metavar="SECONDS",
                     help="only write header[-dark]-still.png at this time, for layout checks")
     args = ap.parse_args()
@@ -312,9 +318,17 @@ def main():
             if args.still is not None:
                 shutil.copy(final / frames[0].name, outdir / f"{name}-still.png")
                 continue
-            out = outdir / f"{name}.webp"
-            run(["img2webp", "-loop", "0", "-lossy", "-q", str(args.quality), "-m", "5",
-                 "-d", str(round(1000 / FPS)), *map(str, sorted(final.glob("*.png"))), "-o", str(out)])
+            out = outdir / f"{name}.{args.format}"
+            if args.format == "avif":
+                run(["ffmpeg", "-y", "-framerate", str(FPS), "-i", str(final / "%04d.png"),
+                     "-c:v", "libsvtav1", "-preset", "5", "-crf", str(args.crf), "-pix_fmt", "yuv420p",
+                     "-g", str(FPS * 2), "-loop", "0", str(out)])
+            elif shutil.which("img2webp"):
+                run(["img2webp", "-loop", "0", "-lossy", "-q", str(args.quality), "-m", "5",
+                     "-d", str(round(1000 / FPS)), *map(str, sorted(final.glob("*.png"))), "-o", str(out)])
+            else:
+                run(["ffmpeg", "-y", "-framerate", str(FPS), "-i", str(final / "%04d.png"),
+                     "-c:v", "libwebp_anim", "-lossy", "1", "-quality", str(args.quality), "-loop", "0", str(out)])
             print(f"{out}: {len(frames)} frames, {W}x{H}, {out.stat().st_size / 1e6:.2f} MB")
     finally:
         shutil.rmtree(tmp)
