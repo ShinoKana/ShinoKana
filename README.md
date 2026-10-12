@@ -16,6 +16,6 @@
 </picture>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://count.getloli.com/get/@ShinoKana?theme=asoul&darkmode=1" />
-  <img align="right" hspace="17" alt="visitor counter" src="https://count.getloli.com/get/@ShinoKana?theme=asoul&darkmode=0" width="300" />
+  <img align="right" hspace="17" alt="" src="https://count.getloli.com/get/@ShinoKana?theme=asoul&darkmode=0" width="300" />
 </picture>
 <br clear="both" />
