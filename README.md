@@ -15,7 +15,7 @@
   <img align="left" alt="languages, stars and longest streak" src="https://raw.githubusercontent.com/ShinoKana/ShinoKana/output/stats.svg" width="346" />
 </picture>
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://kana-counter.vercel.app/@ShinoKana?dark=1&label=1&pad=43" />
-  <img align="right" alt="visitor counter" src="https://kana-counter.vercel.app/@ShinoKana?label=1&pad=43" width="410" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://mizuki-counter.vercel.app/@ShinoKana?dark=1&label=1&pad=43" />
+  <img align="right" alt="visitor counter" src="https://mizuki-counter.vercel.app/@ShinoKana?label=1&pad=43" width="410" />
 </picture>
 <br clear="both" />
